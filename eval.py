@@ -153,23 +153,3 @@ if __name__ == "__main__":
             scores=[evaluate_braintrust],
         )
         print(f"Took {time.time() - start}s")
-        # Eval(
-        #     "MS Marco",  # Replace with your project name
-        #     experiment_name="fts",
-        #     data=lambda: [
-        #         {
-        #             "input": query,
-        #             "expected": label,
-        #             "metadata": {"search_type": "hybrid", "k": "25"},
-        #         }
-        #         for query, label in zip(queries, labels)
-        #     ],  # Replace with your eval dataset
-        #     task=lambda query: [
-        #         row["chunk"]
-        #         for row in table.search(query, query_type="hybrid")
-        #         .select(["chunk"])
-        #         .limit(25)
-        #         .to_list()
-        #     ],
-        #     scores=[evaluate_braintrust],
-        # )

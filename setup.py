@@ -48,7 +48,7 @@ def get_dataset_queries(dataset: Dataset):
 
 if __name__ == "__main__":
     table_name = "ms-marco"
-    n_rows = 1000
+    n_rows = 200
     batch_size = 400
     db_path = "./db"
     os.makedirs("data", exist_ok=True)
