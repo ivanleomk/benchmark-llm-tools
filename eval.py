@@ -151,5 +151,6 @@ if __name__ == "__main__":
                 .to_list()
             ],
             scores=[evaluate_braintrust],
+            trial_count=3,
         )
         print(f"Took {time.time() - start}s")

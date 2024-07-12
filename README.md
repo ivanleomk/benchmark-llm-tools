@@ -36,7 +36,19 @@ python3 setup.py
 python3 eval.py
 ```
 
+3. To see the individual providers, we want to see
+
+```
+python3 server-<provider>.py
+```
+
+and we can make the same query to the `/query` endpoint
+
 General Thoughts
 
 - Langfuse is very slow for some reason and there isn't a way to easily compare across different metrics ( Benchmarked on ~ 900+ queries and it took 10 minutes to upload everything not including query execution time )
 - Braintrust feels more mature as a solution ( ~50s including execution of queries )
+
+- Braintrust is better than langfuse -> Easier to get started but requires some debugging ( But they need all scores to be between 0 -> 1)
+- Langfuse ( Project to separate individual traces ( API key is per-project) ) while Brainrust has the concept of Projects ( u specify this in the init logger func)
+- Traceloop : Concept of versioning in workflows but i suppose we can replicate that with metadata in Langfuse and Braintrust
